@@ -1,24 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j63-Ty-AXg">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Recipe View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecipeViewController" customModule="RevenueCatDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seafood pasta with shrimps and tomatoes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWa-ce-sXa">
+                                <rect key="frame" x="20" y="333" width="353" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zfm-xE-z6a">
+                                <rect key="frame" x="20" y="374" width="393" height="314"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Ingredients:
+
+250g pasta (spaghetti or linguine)
+200g shrimp (peeled &amp; deveined)
+200g cherry tomatoes (halved)
+3 cloves garlic (minced)
+2 tbsp olive oil
+Salt &amp; pepper to taste
+Fresh basil or parsley (for garnish)
+Lemon wedge (for serving)
+
+Cook pasta in salted water until al dente; drain &amp; set aside.
+Heat olive oil in a pan over medium heat. Add garlic &amp; chili flakes; sauté for 30 sec.
+Add shrimp, season with salt &amp; pepper, and cook until pink (2-3 min per side).
+Toss in cherry tomatoes, cook until softened (3-4 min).
+Pour in white wine; let it reduce for 2 min.
+Add cooked pasta, toss everything together. Adjust seasoning.
+</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUD-jx-rfU">
+                                <rect key="frame" x="20" y="718" width="353" height="50"/>
+                                <color key="backgroundColor" name="darkGreen"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HTr-Um-3S2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save Receipe" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveRecipe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y4u-1P-GPH"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pasta-image" translatesAutoresizingMaskIntoConstraints="NO" id="Mkv-3c-GqU">
+                                <rect key="frame" x="10" y="113" width="373" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="4oE-s6-eUw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fWa-ce-sXa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0KK-Nv-gZo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nUD-jx-rfU" secondAttribute="trailing" constant="20" id="CQw-DB-3LS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mkv-3c-GqU" secondAttribute="trailing" constant="10" id="CtO-I1-h5f"/>
+                            <constraint firstItem="Mkv-3c-GqU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="HhT-YK-hv4"/>
+                            <constraint firstItem="Mkv-3c-GqU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lyy-IH-dn7"/>
+                            <constraint firstItem="zfm-xE-z6a" firstAttribute="top" secondItem="fWa-ce-sXa" secondAttribute="bottom" constant="20" id="MRL-45-dAw"/>
+                            <constraint firstItem="Mkv-3c-GqU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="SUC-o5-biM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fWa-ce-sXa" secondAttribute="trailing" constant="20" id="Vtc-VR-3IX"/>
+                            <constraint firstItem="zfm-xE-z6a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hmq-xn-GZG"/>
+                            <constraint firstItem="nUD-jx-rfU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mU9-Jj-vVb"/>
+                            <constraint firstItem="fWa-ce-sXa" firstAttribute="top" secondItem="Mkv-3c-GqU" secondAttribute="bottom" constant="20" id="pKP-wi-Wok"/>
+                            <constraint firstItem="nUD-jx-rfU" firstAttribute="top" secondItem="zfm-xE-z6a" secondAttribute="bottom" constant="30" id="sAT-ws-0L7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nUD-jx-rfU" secondAttribute="bottom" constant="50" id="vKF-xi-kB2"/>
+                            <constraint firstItem="zfm-xE-z6a" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="20" id="wrG-hf-Rpq"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Nqb-8V-1km"/>
+                    <connections>
+                        <outlet property="recipeImageView" destination="Mkv-3c-GqU" id="NDz-Me-ZDJ"/>
+                        <outlet property="saveRecipeButton" destination="nUD-jx-rfU" id="sjr-r2-WtC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1038.9312977099237" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="i1C-mx-Nod">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j63-Ty-AXg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mNr-1b-cxB">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="T9m-Be-7Bk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uwd-JL-PPj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.21374045801527" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pasta-image" width="2970" height="1980"/>
+        <namedColor name="darkGreen">
+            <color red="0.0" green="0.38823529411764707" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
