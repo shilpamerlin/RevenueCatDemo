@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import RevenueCat
+import RevenueCatUI
 
-class ViewController: UIViewController {
+class RecipeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
 
